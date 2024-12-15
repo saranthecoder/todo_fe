@@ -15,7 +15,7 @@ const Login = ({ setUser }) => {
 
     try {
       // Send login data to the backend
-      const response = await axios.post('http://localhost:3000/api/loginUser', {
+      const response = await axios.post('https://todo-backend-9fno.onrender.com/api/loginUser', {
         email,
         password,
       });

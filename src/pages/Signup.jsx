@@ -16,7 +16,7 @@ const Signup = () => {
 
     try {
         // Send signup data to the backend
-        const response = await axios.post('http://localhost:3000/api/signupUser', {
+        const response = await axios.post('https://todo-backend-9fno.onrender.com/api/signupUser', {
             username,
             email,
             password,

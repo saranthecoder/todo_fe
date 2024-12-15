@@ -17,7 +17,7 @@ const Todo = ({ user }) => {
         console.log(userId);
 
       try {
-        const response = await axios.post(`http://localhost:3000/api/getData`,{ userId: userId },);
+        const response = await axios.post(`https://todo-backend-9fno.onrender.com/api/getData`,{ userId: userId },);
         setTodos(response.data.todos);
       } catch (error) {
         console.error('Error fetching todos:', error);
@@ -35,7 +35,7 @@ const Todo = ({ user }) => {
       console.log(user);
 
       try {
-        const response = await axios.post(`http://localhost:3000/api/add`,{userId:user,data:newTodo});
+        const response = await axios.post(`https://todo-backend-9fno.onrender.com/api/add`,{userId:user,data:newTodo});
         console.log(response)
         setTodos(response.data.todos);
         setNewTodo('');
